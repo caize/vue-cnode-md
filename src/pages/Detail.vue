@@ -39,6 +39,16 @@
             </div>
             <md-divider></md-divider>
         </md-list-item>
+        <md-list-item>
+            <div class="md-list-text-container">
+                <span>
+                    <md-icon class="md-accent">comment</md-icon>
+                    <span class="count">{{detail.reply_count}}</span>
+                    条评论
+                </span>
+            </div>
+            <md-divider></md-divider>
+        </md-list-item>
         <!-- <md-list-item v-for="reply in detail.replies" :key="reply.id">
             <md-avatar>
                 <img :src="reply.author.avatar_url" alt="">
@@ -83,11 +93,15 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped="">
 .detail-content {
     width: 100%;
     word-wrap:break-word;
     overflow-x: hidden;
+}
+
+.count{
+    color: #e91e63
 }
 code, pre{
     overflow: scroll;

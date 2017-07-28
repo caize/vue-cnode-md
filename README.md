@@ -36,4 +36,11 @@ TODO LIST:
 该项目是我对 vue2.0 和 vuex 的一个练手项目，通过实践操作去了解各个组件如何结合成为一个项目。
 
 <del>在线地址: 暂无</del>
+
+![](./screenshot/Cnode-0001.png)
+![](./screenshot/Cnode-0002.png)
+![](./screenshot/Cnode-0003.png)
+![](./screenshot/Cnode-0004.png)
+![](./screenshot/Cnode-0005.png)
+
 欢迎各路大神star和issue，如果有什么建议，可以在issue中提出。

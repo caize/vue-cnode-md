@@ -4,10 +4,10 @@
         <md-avatar>
             <img :src="reply.author.avatar_url" alt="">
         </md-avatar>
-        <div class="detail-content">
-            <span>{{reply.author.loginname}}</span>
+        <div class="reply-content">
+            <span class="loginname">{{reply.author.loginname}}</span>
             <div v-html="reply.content"></div>
-            <p>{{reply.create_at | dateFormat('YYYY-MM-DD HH:mm')}}</p>
+            <span class="timestamp">{{reply.create_at | dateFormat('YYYY-MM-DD HH:mm')}}</span>
         </div>
         <md-divider class="md-inset"></md-divider>
     </md-list-item>
@@ -20,5 +20,22 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+.reply-content{
+    word-break: break-all;
+    color: #555;
+    p{
+        margin: 5px 0;
+    }
+}
+.loginname{
+    margin-top: 4px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+.timestamp{
+    font-size: .8em;
+    color: #999;
+}
 </style>

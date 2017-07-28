@@ -139,6 +139,7 @@ export default {
                     type
                 }
             })
+            this.$store.dispatch('switchLoading', !!0)
             this.$store.dispatch('switchType', type || '')
             console.log('changeType', this.type)
             this.toggleSlideNav()
