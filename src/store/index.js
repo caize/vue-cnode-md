@@ -31,11 +31,12 @@ const state = {
         content: '',
         replies: []
     },
-    user: {
+    me: {
         loginname: '',
         id: '',
         avatar_url: ''
-    }
+    },
+    user: {}
 }
 
 export default new Vuex.Store({

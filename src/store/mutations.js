@@ -19,5 +19,9 @@ export default {
     [types.STORE_DETAIL](state, detail) {
         // state.datas[type] = state.datas[type].concat(data)
         state.detail = detail
+    },
+    [types.STORE_USER](state, userInfo) {
+        // state.datas[type] = state.datas[type].concat(data)
+        state.user = userInfo
     }
 }

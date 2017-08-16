@@ -71,4 +71,9 @@ img{
         top: 0;
     }
 }
+.md-icon{
+    &.md-size-1x{
+        font-size: 24px;
+    }
+}
 </style>

@@ -20,7 +20,6 @@ export default {
         commit(types.LOADING, !!1)
         axios.get(BASE_URL + '/topics?tab=' + (type === 'default' ? '' : type) + '&page=' + page)
             .then((res) => {
-                // console.log(res)
                 var data = res.data.data
                 commit(types.STORE_TYPE, {type, data})
                 commit(types.STORE_PAGE, {type, page})
@@ -34,6 +33,15 @@ export default {
                 // console.log(res)
                 var data = res.data.data
                 commit(types.STORE_DETAIL, data)
+                commit(types.LOADING, !!0)
+            })
+    },
+    getUserInfo({commit}, loginname) {
+        axios.get(BASE_URL + '/user/' + loginname)
+            .then((res) => {
+                var userInfo = res.data.data
+                console.log(userInfo)
+                commit(types.STORE_USER, userInfo)
                 commit(types.LOADING, !!0)
             })
     }

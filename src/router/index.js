@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Home from '@/pages/Home'
 import Detail from '@/pages/Detail'
+import User from '@/pages/UserInfo'
 
 Vue.use(Router)
 
@@ -29,5 +30,9 @@ export default new Router({
         path: '/Detail/:id',
         name: 'Detail',
         component: Detail
+    }, {
+        path: '/User/:loginname',
+        name: 'User',
+        component: User
     }]
 })

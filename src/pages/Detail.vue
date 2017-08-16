@@ -3,18 +3,18 @@
     <md-toolbar class="md-large md-accent">
         <div class="md-toolbar-container">
             <md-button class="md-icon-button" @click="$router.go(-1)">
-                <md-icon>keyboard_backspace</md-icon>
+                <md-icon class="md-size-1x" md-iconset="fa fa-angle-left"></md-icon>
             </md-button>
 
             <span style="flex: 1;"></span>
 
             <md-button>
                 <span style="margin-right:20px;">
-                    <md-icon class="" v-if="detail.good">thumb_up</md-icon>
+                    <md-icon class="" v-if="detail.good" md-iconset="fa fa-thumbs-o-up"></md-icon>
                 </span>
                 <span>
-                    <md-icon class="" v-if="detail.is_collect">favorite</md-icon>
-                    <md-icon class="" v-else="">favorite_border</md-icon>
+                    <md-icon class="md-size-1x" v-if="detail.is_collect" md-iconset="fa fa-star"></md-icon>
+                    <md-icon class="md-size-1x" v-else="" md-iconset="fa fa-star-o"></md-icon>
                 </span>
             </md-button>
         </div>
@@ -42,7 +42,7 @@
         <md-list-item>
             <div class="md-list-text-container">
                 <span>
-                    <md-icon class="md-accent">comment</md-icon>
+                    <md-icon class="md-accent" md-iconset="fa fa-comments-o"></md-icon>
                     <span class="count">{{detail.reply_count}}</span>
                     条评论
                 </span>

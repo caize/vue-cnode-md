@@ -6,5 +6,7 @@ export default {
 
     getDetail: state => state.detail,
 
-    getLoginStatu: state => !!state.user.loginname
+    getLoginStatu: state => !!state.me.loginname,
+
+    getUserInfo: state => state.user
 }

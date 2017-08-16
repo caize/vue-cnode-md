@@ -4,7 +4,7 @@
         <!-- <md-toolbar fixed class="md-dense"> -->
             <div class="md-toolbar-container">
                 <md-button class="md-icon-button" @click="toggleSlideNav()">
-                    <md-icon>menu</md-icon>
+                    <md-icon md-iconset="fa fa-bars"></md-icon>
                 </md-button>
 
                 <h2 class="md-title" style="flex: 1;">{{title[type]}}</h2>
@@ -48,7 +48,6 @@ import {
 import TopicItem from '@/components/TopicItem'
 import InfiniteLoading from 'vue-infinite-loading'
 import axios from 'axios'
-// import {MtHeader} from 'mint-ui'
 const BASE_URL = 'https://cnodejs.org/api/v1'
 export default {
     components: {
@@ -114,7 +113,6 @@ export default {
                 axios.get(BASE_URL + '/topics?tab=' + (type === 'default' ? '' : type) + '&page=' + page)
                     .then((res) => {
                         var data = res.data.data
-                        // console.log({type, page, data})
                         this.$store.dispatch('switchLoading', !!0)
                         this.$store.dispatch('storeType', {type, data})
                         this.$store.dispatch('storePage', {type, page})
@@ -123,9 +121,6 @@ export default {
                         } else {
                             this.$refs.infiniteLoading.$emit('$InfiniteLoading:complete')
                         }
-                        // commit(types.STORE_TYPE, {type, data})
-                        // commit(types.STORE_PAGE, {type, page})
-                        // commit(types.LOADING, !!0)
                     })
             }
         },

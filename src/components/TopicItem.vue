@@ -8,10 +8,11 @@
             <span>
                 <span class="type-tab good" v-if="topic.top">置顶</span>
                 <span class="type-tab good" v-else-if="topic.good">精华</span>
-                <span class="type-tab" v-else>{{type}}</span>
+                <span class="type-tab" v-else-if="type">{{type}}</span>
                 {{topic.title}}
             </span>
             <p>{{topic.author.loginname}}</p>
+            <p v-if="topic.last_reply_at">最后回复：{{topic.last_reply_at | dateFormat('YYYY-MM-DD HH:mm')}}</p>
         </div>
         <md-divider class="md-inset"></md-divider>
     </router-link>

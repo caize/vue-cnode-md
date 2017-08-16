@@ -5,7 +5,8 @@
             <img :src="reply.author.avatar_url" alt="">
         </md-avatar>
         <div class="reply-content">
-            <span class="loginname">{{reply.author.loginname}}</span>
+            <router-link :to="{ name: 'User', params: {loginname: reply.author.loginname} }">{{reply.author.loginname}}</router-link>
+            <!-- <span class="loginname">{{reply.author.loginname}}</span> -->
             <div v-html="reply.content"></div>
             <span class="timestamp">{{reply.create_at | dateFormat('YYYY-MM-DD HH:mm')}}</span>
         </div>
